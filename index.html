@@ -1,0 +1,105 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#101113">
+  <meta name="description" content="A central dashboard for projects, experiments, and things I've built.">
+  <title>Project Index — Portfolio</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <script src="projects.js" defer></script>
+  <script src="app.js" defer></script>
+</head>
+<body>
+  <div class="ambient ambient-one"></div>
+  <div class="ambient ambient-two"></div>
+  <header class="topbar">
+    <a class="brand" href="#" aria-label="Project Index home">
+      <span class="brand-mark">S<span>/</span></span>
+      <span class="brand-name">PROJECT INDEX<span class="brand-dot">.</span></span>
+    </a>
+    <nav class="topnav">
+      <a href="#projects">Projects</a>
+      <a href="#about">About</a>
+      <a class="github-link" href="https://github.com/Shawnobr" target="_blank" rel="noreferrer">GitHub <span>↗</span></a>
+    </nav>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="hero-copy">
+        <div class="eyebrow"><span class="status-dot"></span> PERSONAL PROJECT DIRECTORY</div>
+        <h1>A home for<br>things I <em>build.</em></h1>
+        <p class="hero-description">A central place to explore my projects, experiments, and ideas — all in one spot.</p>
+        <div class="hero-actions">
+          <a class="button button-primary" href="#projects">Explore projects <span>↓</span></a>
+          <a class="text-link" id="hero-github" href="https://github.com/Shawnobr" target="_blank" rel="noreferrer">View GitHub <span>↗</span></a>
+        </div>
+      </div>
+      <div class="hero-art" aria-hidden="true">
+        <div class="orbit orbit-large"></div>
+        <div class="orbit orbit-small"></div>
+        <div class="art-cross cross-one">+</div>
+        <div class="art-cross cross-two">+</div>
+        <div class="art-card">
+          <div class="art-card-top"><span>BUILD LOG / 001</span><span class="live-dot"></span></div>
+          <div class="art-glyph">S<span>.</span></div>
+          <div class="art-card-bottom"><span>IDEAS → INTERFACE</span><span>∞</span></div>
+        </div>
+        <div class="art-caption">A WORK IN PROGRESS<br><span>ALWAYS MAKING SOMETHING</span></div>
+      </div>
+      <div class="hero-index"><span>01</span><span class="index-line"></span><span>INDEPENDENT BUILDS</span></div>
+    </section>
+
+    <section class="projects-section" id="projects">
+      <div class="section-heading">
+        <div>
+          <div class="eyebrow">THE COLLECTION <span class="muted">/ 2026—</span></div>
+          <h2>Selected <em>projects</em></h2>
+        </div>
+        <div class="project-count"><span id="project-count">00</span> PROJECTS</div>
+      </div>
+
+      <div class="toolbar">
+        <label class="search-box">
+          <span class="search-icon">⌕</span>
+          <input id="project-search" type="search" placeholder="Search projects..." aria-label="Search projects">
+          <span class="search-shortcut">SEARCH</span>
+        </label>
+        <div class="filters" id="filters" aria-label="Filter projects">
+          <button class="filter active" data-category="All">All work</button>
+        </div>
+      </div>
+
+      <div class="project-grid" id="project-grid" aria-live="polite"></div>
+      <div class="empty-state" id="empty-state" hidden>
+        <span class="empty-symbol">∅</span>
+        <h3>No projects found</h3>
+        <p>Try another search, or update <code>projects.js</code> to add your next build.</p>
+      </div>
+    </section>
+
+    <section class="about-section" id="about">
+      <div class="about-number">02 / ABOUT THIS SPACE</div>
+      <div class="about-content">
+        <h2>One index.<br><em>Many directions.</em></h2>
+        <p>This page is the starting point for my projects. Each card leads to a dedicated project page, demo, or repository. New projects can be added by editing one simple file — no layout changes needed.</p>
+      </div>
+      <div class="about-side">
+        <div class="about-rule"></div>
+        <span>MADE TO GROW</span>
+        <span class="about-symbol">↗</span>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <a class="brand footer-brand" href="#"><span class="brand-mark">S<span>/</span></span><span class="brand-name">PROJECT INDEX<span class="brand-dot">.</span></span></a>
+    <span class="footer-note">A PERSONAL DIRECTORY OF THINGS MADE.</span>
+    <a class="back-top" href="#">BACK TO TOP ↑</a>
+  </footer>
+</body>
+</html>
