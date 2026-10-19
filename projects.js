@@ -16,9 +16,9 @@ window.PROJECTS = [
     name: "Media Rating Library",
     category: "Web App",
     status: "IN PROGRESS",
-    description: "A personal movie and show organizer for listing and ranking media.",
+    description: "My Movie and TV show ranking database for public view. Actual config app is privately hosted locally.",
     url: "https://shawnobr.github.io/movie-library-public/",
     icon: "📽︎",
-    tags: ["Interactive-Database", "Movies", "TV-Shows"]
+    tags: ["Database", "Movies", "TV-Shows"]
   }
 ];
