@@ -140,7 +140,7 @@ img, svg, video, canvas { max-width: 100%; }
   color: var(--accent);
 }
 .greenhead {
-  font: 18px var(--mono);
+  font: 30px var(--mono);
   letter-spacing: .15em;
   color: var(--accent);
 }
