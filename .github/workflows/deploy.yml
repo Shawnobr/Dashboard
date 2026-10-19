@@ -1,0 +1,70 @@
+
+name: Deploy Dashboard to GitHub Pages
+
+on:
+  push:
+    branches:
+      - main
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+concurrency:
+  group: github-pages
+  cancel-in-progress: true
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v6
+
+      - name: Add automatic cache-busting versions
+        env:
+          BUILD_VERSION: ${{ github.sha }}
+        run: |
+          python3 - <<'PY'
+          import os
+          from pathlib import Path
+
+          path = Path("index.html")
+          html = path.read_text(encoding="utf-8")
+          version = os.environ["BUILD_VERSION"]
+
+          html = html.replace(
+              'href="style.css"',
+              f'href="style.css?v={version}"'
+          )
+          html = html.replace(
+              'src="projects.js"',
+              f'src="projects.js?v={version}"'
+          )
+          html = html.replace(
+              'src="app.js"',
+              f'src="app.js?v={version}"'
+          )
+
+          path.write_text(html, encoding="utf-8")
+          print(f"Cache-busting version applied: {version}")
+          PY
+
+      - name: Configure GitHub Pages
+        uses: actions/configure-pages@v5
+
+      - name: Upload website
+        uses: actions/upload-pages-artifact@v4
+        with:
+          path: .
+
+      - name: Deploy website
+        id: deployment
+        uses: actions/deploy-pages@v4
