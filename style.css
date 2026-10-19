@@ -139,6 +139,11 @@ img, svg, video, canvas { max-width: 100%; }
   letter-spacing: .15em;
   color: var(--accent);
 }
+.greenhead {
+  font: 18px var(--mono);
+  letter-spacing: .15em;
+  color: var(--accent);
+}
 
 .status-dot,
 .live-dot {
