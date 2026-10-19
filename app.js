@@ -67,8 +67,5 @@
         </a>`;
     }).join("");
   }
-
-  const githubLink = "https://github.com/Shawnobr";
-  document.getElementById("hero-github").href = githubLink;
   render();
 })();
