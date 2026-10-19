@@ -17,7 +17,7 @@ window.PROJECTS = [
     category: "Web App",
     status: "IN PROGRESS",
     description: "A personal movie organizer for collecting, rating, and manually ranking films.",
-    url: "https://github.com/Shawnobr/movie-library-public",
+    url: "https://shawnobr.github.io/movie-library-public/",
     icon: "📽︎",
     tags: ["Interactive-Database", "Movies", "TV-Shows"]
   }
