@@ -19,6 +19,6 @@ window.PROJECTS = [
     description: "A personal movie organizer for collecting, rating, and manually ranking films.",
     url: "https://github.com/Shawnobr/movie-library-public",
     icon: "📽︎",
-    tags: ["Next.js", "Movies", "Database"]
+    tags: ["Interactive-Database", "Movies", "TV-Shows"]
   }
 ];
