@@ -49,6 +49,32 @@
 
   updateLastUpdated();
 
+  // Escape text before inserting it into HTML.
+  function escapeHtml(value) {
+    return String(value ?? "").replace(/[&<>"']/g, character => ({
+      "&": "&amp;",
+      "<": "&lt;",
+      ">": "&gt;",
+      '"': "&quot;",
+      "'": "&#39;"
+    })[character]);
+  }
+
+  // Allow only HTTP and HTTPS links.
+  function safeUrl(value) {
+    if (!value) return "";
+
+    try {
+      const url = new URL(value, window.location.href);
+
+      return ["http:", "https:"].includes(url.protocol)
+        ? url.href
+        : "";
+    } catch {
+      return "";
+    }
+  }
+
   // Create category filters.
   const categories = [
     "All",
@@ -78,30 +104,6 @@
   });
 
   search.addEventListener("input", render);
-
-  // Escape text before inserting it into HTML.
-  function escapeHtml(value) {
-    return String(value ?? "").replace(/[&<>"']/g, character => ({
-      "&": "&amp;",
-      "<": "&lt;",
-      ">": "&gt;",
-      '"': "&quot;",
-      "'": "&#39;"
-    })[character]);
-  }
-
-  // Allow only HTTP and HTTPS links.
-  function safeUrl(value) {
-    try {
-      const url = new URL(value, window.location.href);
-
-      return ["http:", "https:"].includes(url.protocol)
-        ? url.href
-        : "#";
-    } catch {
-      return "#";
-    }
-  }
 
   // Display and filter projects.
   function render() {
@@ -136,19 +138,14 @@
         .map(tag => `<span class="card-tag">${escapeHtml(tag)}</span>`)
         .join("");
 
-      <a
-  href="${project.url || '#'}"
-  class="project-card"
-  ${project.url ? '' : 'onclick="return false;"'}
-  ${project.url ? '' : 'aria-disabled="true"'}
->
+      const href = safeUrl(project.url);
+      const hasLink = Boolean(href);
 
       return `
         <a
           class="project-card"
-          href="${escapeHtml(href)}"
-          target="_blank"
-          rel="noreferrer"
+          href="${hasLink ? escapeHtml(href) : "#"}"
+          ${hasLink ? 'target="_blank" rel="noopener noreferrer"' : 'aria-disabled="true" onclick="return false;"'}
         >
           <div class="card-top">
             <span class="project-type">
