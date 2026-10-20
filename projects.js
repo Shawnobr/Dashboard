@@ -35,7 +35,7 @@ window.PROJECTS = [
     category: "Physical Project",
     status: "Future Project",
     description: "Requires soldering and assembly.",
-    url: "https://github.com/",
+    url: "",
     icon: "⌚︎",
     tags: ["Physical Project", "DIY"]
   }
