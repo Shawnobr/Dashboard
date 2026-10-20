@@ -3,10 +3,10 @@
     name: "Next Project",
     category: "Experiment",
     status: "COMING SOON",
-    description: "Replace this sample card with your next project. You can add as many project entries as you like.",
+    description: "Many describing words for this project",
     url: "https://github.com/",
     icon: "✳",
-    tags: ["Your tag", "Another tag"]
+    tags: ["A tag", "Another tag"]
   }
 ];
 */
@@ -29,5 +29,14 @@ window.PROJECTS = [
     url: "",
     icon: "🗐",
     tags: ["Physical Project", "3D-Print"]
+  },
+    {
+    name: "Digital Watch Kit",
+    category: "Physical Project",
+    status: "Future Project",
+    description: "Requires soldering and assembly.",
+    url: "https://github.com/",
+    icon: "⌚︎",
+    tags: ["Physical Project", "DIY"]
   }
 ];
