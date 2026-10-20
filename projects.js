@@ -34,7 +34,7 @@ window.PROJECTS = [
     name: "Digital Watch Kit",
     category: "Physical Project",
     status: "Future Project",
-    description: "Requires soldering and assembly.",
+    description: "Built from electronic components, requires soldering and assembly.",
     url: "",
     icon: "⌚︎",
     tags: ["Physical Project", "DIY"]
