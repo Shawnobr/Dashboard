@@ -136,7 +136,12 @@
         .map(tag => `<span class="card-tag">${escapeHtml(tag)}</span>`)
         .join("");
 
-      const href = safeUrl(project.url || "#");
+      <a
+  href="${project.url || '#'}"
+  class="project-card"
+  ${project.url ? '' : 'onclick="return false;"'}
+  ${project.url ? '' : 'aria-disabled="true"'}
+>
 
       return `
         <a
