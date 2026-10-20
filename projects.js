@@ -26,7 +26,7 @@ window.PROJECTS = [
     category: "Physical Project",
     status: "In-Progress",
     description: "While reciving my great grandfather's drafting board, he had left drafting board paper with some designs and sketches on it. I'm going to frame it.",
-//    url: "///",
+    url: "",
     icon: "🗐",
     tags: ["Physical Project", "3D-Print"]
   },
@@ -35,7 +35,7 @@ window.PROJECTS = [
     category: "Physical Project",
     status: "Future Project",
     description: "Requires soldering and assembly.",
-//    url: "///",
+    url: "",
     icon: "⌚︎",
     tags: ["Physical Project", "DIY"]
   }
