@@ -35,7 +35,7 @@ window.PROJECTS = [
     category: "Physical Project",
     status: "Future Project",
     description: "Built from electronic components, requires soldering and assembly.",
-    url: "",
+    url: "https://shawnobr.github.io/Dashboard/Documents/Digital%20Watch%20Project.pdf",
     icon: "⌚︎",
     tags: ["Physical Project", "DIY"]
   }
