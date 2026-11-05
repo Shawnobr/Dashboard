@@ -49,4 +49,3 @@ window.PROJECTS = [
     tags: ["Spotify", "Statistics"]
   }
 ];
-];
