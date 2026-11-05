@@ -38,5 +38,15 @@ window.PROJECTS = [
     url: "https://shawnobr.github.io/Dashboard/Documents/Digital%20Watch%20Project.pdf",
     icon: "⌚︎",
     tags: ["Physical Project", "DIY"]
+  },
+    {
+    name: "SpotiStats",
+    category: "Web App",
+    status: "Testing",
+    description: "Display Lifetime spotify statistics through spotify's data ZIP files.",
+    url: "https://shawnobr.github.io/SpotiStats/",
+    icon: "♫",
+    tags: ["Spotify", "Statistics"]
   }
+];
 ];
